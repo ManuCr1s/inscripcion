@@ -14,14 +14,14 @@
                     <div class="form-group row px-5 m-0">
                         <label for="input_dni" class="col-sm-4 text-label-sm">Primer nombre</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control control-input" name="primer_nombre" id="primer_nombre">
+                            <input type="text" class="form-control control-input" name="primer_nombre" id="primer_nombre" readonly>
                         </div>
                     </div>
 
                     <div class="form-group row px-5 m-0">
                         <label for="input_dni" class="col-sm-4 text-label-sm">Primer apellido</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control control-input" name="primer_apellido" id="primer_apellido">
+                            <input type="text" class="form-control control-input" name="primer_apellido" id="primer_apellido" readonly>
                         </div>
                     </div>
 
@@ -46,13 +46,13 @@
                     <div class="form-group row px-5 m-0">
                         <label for="input_dni" class="col-sm-4 text-label-sm">Segundo nombre</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control control-input" id="segundo_nombre" name="segundo_nombre">
+                            <input type="text" class="form-control control-input" id="segundo_nombre" name="segundo_nombre" readonly>
                         </div>
                     </div>
                     <div class="form-group row px-5 m-0">
                         <label for="input_dni" class="col-sm-4 text-label-sm">Segundo apellido</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control control-input" id="segundo_apellido" name="segundo_apellido">
+                            <input type="text" class="form-control control-input" id="segundo_apellido" name="segundo_apellido" readonly>
                         </div>
                     </div>
                     <div class="form-group row px-5 m-0">

@@ -8,7 +8,6 @@ $(document).ready(function(){
         btn = $('#btn-ico'),
         tipo = $('#tipo_doc'),
         numero = $('#input_dni'),
-        clear_input,
         validate_documento;
     
     numero.on("keypress", onlyNumbers);
@@ -19,7 +18,7 @@ $(document).ready(function(){
             primerApellido = $('#primer_apellido'),
             direccion = $('#direccion'),
             segundo_apellido = $('#segundo_apellido'),
-            correo = $('#correo');
+            correo = $('#correo'),
             clear_input = clearInput(primerNombre,primerApellido,segundo_apellido);
             validate_documento = (tipo.val()=='1')?validacionTipo(numero.val(),8,'DNI'):validacionTipo(numero.val(),11,'RUC');   
             if(validate_documento.success){
