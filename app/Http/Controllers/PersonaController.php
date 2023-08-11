@@ -119,8 +119,8 @@ class PersonaController extends Controller
     private $rules = [
         'tipo_doc' => 'required',
         'primer_nombre' => 'required',
-        'primer_apellido' => 'required',
-        'segundo_apellido' => 'required',
+        'primer_apellido' => 'required_if:tipo_doc,1',
+        'segundo_apellido' => 'required_if:tipo_doc,1',
         'direccion' => 'required',
         'correo' => 'required',
         'input_dni' => 'required'
@@ -128,8 +128,8 @@ class PersonaController extends Controller
     private $message=[
         'tipo_doc.required' => 'Ingrese el tipo de documento',
         'primer_nombre.required' => 'Ingrese su nombre',
-        'primer_apellido.required' => 'Ingrese su primer apellido',
-        'segundo_apellido.required' => 'Ingrese su segundo apellido',
+        'primer_apellido.required_if' => 'Ingrese su Apellido Paterno',
+        'segundo_apellido.required_if' => 'Ingrese su Apellido Materno',
         'direccion.required' => 'Ingrese su direccion',
         'correo.required' => 'Ingrese su correo electronico',
         'input.required' => 'Ingrese numero de documento'
