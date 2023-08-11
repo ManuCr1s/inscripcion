@@ -12,12 +12,18 @@ export function onlyNumbers(code){
 function inputNull(code){
     return (code.length > 0);
 }
-export function validacionCampos(tipo,numero,primerNombre,primerApellido,direccion,segundo_apellido,correo){
+export function validacionCampos(tipo,numero,primerNombre,primerApellido=null,direccion,segundo_apellido= null,correo){
     console.log(tipo,numero);
     if(!(inputNull(numero)) )return {'success':false,'message':'Ingrese numero de documento de usuario'};
     if(!(inputNull(primerNombre)) )return {'success':false,'message':'Ingrese Primer Nombre de usuario'};
-    if(!(inputNull(primerApellido))&& tipo == '1')return {'success':false,'message':'Ingrese Apellido Paterno de usuario'};
-    if(!(inputNull(segundo_apellido))&& tipo == '1') return {'success':false,'message':'Ingrese Apellido Materno de usuario'};
+    if(tipo=='1'){
+        if(!(inputNull(primerApellido))){
+            return {'success':false,'message':'Ingrese Apellido Paterno de usuario'};
+        }
+        if(!(inputNull(segundo_apellido))){
+            return {'success':false,'message':'Ingrese Apellido Materno de usuario'};
+        }
+    }
     if(!(inputNull(direccion)) ) return {'success':false,'message':'Ingrese Direccion de usuario'};
     if(!(inputNull(correo)) ) return {'success':false,'message':'Ingrese Correo de usuario'};
     if(tipo=='1' && numero.length != 8)return {'success':false,'message':'Ingrese un documento DNI valido'};

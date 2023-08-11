@@ -1,5 +1,5 @@
 <form class="row" id="form-user">
-                <div id="env" data-api-url="{{env('APP_ROUTE')}}"></div>
+                <div id="env" data-api-url="{{env('APP_URL')}}"></div>
                 <div class="col-md-6">
                     <div class="form-group row px-5 pt-2 m-0">
                         <label for="input_dni" class="col-sm-4 text-label-sm">Tipo de documento de Identidad</label>
@@ -39,7 +39,7 @@
                         <div class="col-sm-8 d-flex">
                           
                                 <input type="text" class="form-control control-input" id="input_dni" name="input_dni" maxlength="11" minxlength="8">
-                                <button class="icon icon-green" id="btn-ico"><i class="fa-solid fa-user"></i></button>
+                                <button class="icon icon-green" id="btn-ico">☻</button>
                             
                         </div>
                     </div>

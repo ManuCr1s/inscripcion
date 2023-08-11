@@ -1,50 +1,115 @@
-.bgs-red{
-    background-color: #cf000b;
+@media (max-width: 800px) {
+    .bgs-red{
+        background-color: #cf000b;
+    }
+    .bgs-lead{
+        background-color: #26292e;
+    }
+    .text-label-sm{
+        font-size: 11px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .control-input{
+        height: 27px;
+        font-size: 11px;
+    }
+    .btn-size{
+        display: flex;
+        justify-content: center;
+    }   
+    .btn-login{
+        background-color: #00823b;
+        border-radius: none;
+        height: 3vh;
+        padding: 5px;
+        font-size: 11px;
+        margin-right: 0.5%;
+    }
+    .footer-size{
+        margin-top: 10%;
+    }
+    .letter-size{
+        font-size: 11px;
+    }
+    .icon{
+        margin:0;
+        padding:0 3%;
+        border: 0;
+        color: white;
+    }
+    .icon-green{
+        background-color: #00823b;
+    }
+    .icon-green:hover{
+        background-color: #015f2b;
+    }
+    .logo-size{
+        width: 20%;
+    }
+    .text-color{
+        font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: white;
+        font-weight:300;
+        font-size: 14px;
+        border-left: 1px solid white;
+        display: flex;
+        justify-content: center;
+    }
 }
-.bgs-lead{
-    background-color: #26292e;
-}
-.text-label-sm{
-    font-size: 11px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.control-input{
-    height: 27px;
-    font-size: 11px;
-}
-.logo-size{
-    width: 8%;
-}
-.text-color{
-    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
-    color: white;
-    font-weight:300;
-    font-size: 18px;
-    border-left: 1px solid white;
-}
-.btn-login{
-    background-color: #00823b;
-    border-radius: none;
-    height: 3vh;
-    padding: 5px;
-    font-size: 11px;
-    margin-right: 0.5%;
-}
-.footer-size{
-    margin-top: 10%;
-}
-.letter-size{
-    font-size: 11px;
-}
-.icon{
-    margin:0;
-    padding:0 3%;
-    border: 0;
-    color: white;
-}
-.icon-green{
-    background-color: #00823b;
-}
-.icon-green:hover{
-    background-color: #015f2b;
+@media (min-width: 800px) {
+    .bgs-red{
+        background-color: #cf000b;
+    }
+    .bgs-lead{
+        background-color: #26292e;
+    }
+    .text-label-sm{
+        font-size: 11px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .control-input{
+        height: 27px;
+        font-size: 11px;
+    }
+    .logo-size{
+        width: 10%;
+    }
+    .text-color{
+        font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: white;
+        font-weight:300;
+        font-size: 18px;
+        border-left: 1px solid white;
+    }
+    .btn-size{
+        display: flex;
+        justify-content: end;
+    }   
+    .btn-login{
+        background-color: #00823b;
+        border-radius: none;
+        height: 3vh;
+        padding: 5px;
+        font-size: 11px;
+        margin-right: 0.5%;
+    }
+    .footer-size{
+        margin-top: 10%;
+    }
+    .letter-size{
+        font-size: 11px;
+    }
+    .icon{
+        margin:0;
+        padding:0 3%;
+        border: 0;
+        color: white;
+    }
+    .icon-green{
+        background-color: #00823b;
+    }
+    .icon-green:hover{
+        background-color: #015f2b;
+    }
+    
 }

@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Inscripcion</title>
     @vite(['resources/js/app.js', 'resources/css/app.css'])
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 <body>
     <div class="container-fluid">
@@ -13,7 +14,7 @@
                 <div class="col-md-1"></div>
                 <img src="{{asset('img/logo_primario.svg')}}" class="col-md-1 logo-size p-2">
                 <div class="col-md-4 my-3 text-color">SEDE DIGITAL</div>
-                <div class="col-md-5 d-flex justify-content-end">
+                <div class="col-md-5 btn-size">
                     <a href="" class="btn btn-success btn-login my-3">IR A LOGIN</a>
                 </div>
 
