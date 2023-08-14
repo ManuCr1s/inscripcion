@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Persona;
 use App\Models\Rol;
+use App\Mail\PersonMail;
+use Illuminate\Support\Facades\Mail;
 
 class PersonaController extends Controller
 {
@@ -19,7 +21,6 @@ class PersonaController extends Controller
     {
         return view('user.inscripcion');
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -145,7 +146,13 @@ class PersonaController extends Controller
             if($user['success']){
                 $rol = $this->create_rol($user['codigo']);
                 if($rol['success']){
+                    $persona = $request->input('primer_nombre').' '.$request->input('primer_apellido').' '.$request->input('segundo_apellido'); 
+                    $user = $request->input('input_dni');
+                    $pass = 'SgddHmpp2023*';
+                    Mail::to($request->input('correo'))->send(new PersonMail($persona,$user,$pass));
                     return ['success'=>true,'message'=>$rol['message']];
+                
+                
                 }else{
                     $rol_delete = destroy($user['codigo']);
                     $rol_delete['success']?:$rol_delete['message']; 
