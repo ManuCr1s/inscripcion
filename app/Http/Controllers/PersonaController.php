@@ -123,7 +123,7 @@ class PersonaController extends Controller
         'primer_apellido' => 'required_if:tipo_doc,1',
         'segundo_apellido' => 'required_if:tipo_doc,1',
         'direccion' => 'required',
-        'correo' => 'required',
+        'correo' => 'required|email',
         'input_dni' => 'required'
     ];
     private $message=[
@@ -133,11 +133,12 @@ class PersonaController extends Controller
         'segundo_apellido.required_if' => 'Ingrese su Apellido Materno',
         'direccion.required' => 'Ingrese su direccion',
         'correo.required' => 'Ingrese su correo electronico',
+        'correo.email' => 'Ingrese un correo veridico',
         'input.required' => 'Ingrese numero de documento'
     ];
     public function store(Request $request){
         $validations = Validator::make($request->all(),$this->rules,$this->message);
-        if($validations->fails())return $validations->errors();
+        if($validations->fails())return $validations->errors();       
         $old = self::show($request->input('input_dni'));
         if($old){
             return array('success'=>false,'message' =>'El usuario ya se encuentra registrado');
@@ -151,8 +152,6 @@ class PersonaController extends Controller
                     $pass = 'SgddHmpp2023*';
                     Mail::to($request->input('correo'))->send(new PersonMail($persona,$user,$pass));
                     return ['success'=>true,'message'=>$rol['message']];
-                
-                
                 }else{
                     $rol_delete = destroy($user['codigo']);
                     $rol_delete['success']?:$rol_delete['message']; 

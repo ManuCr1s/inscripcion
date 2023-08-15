@@ -92,7 +92,7 @@ $(document).ready(function(){
                             title: "Upps al parecer hubo un problema",
                             text: response.message,
                             icon: "warning"
-                        })
+                        })  
                     }
                 }
             });
