@@ -7,6 +7,7 @@
     <title>Inscripcion</title>
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="{{ asset('peru.ico') }}">
 </head>
 <body>
     <div class="container-fluid">
@@ -23,6 +24,9 @@
             <h3 class="m-4 font-weight-normal">REGISTRO DE USUARIOS</h3>
         </div>
        
+    </div>
+    <div id="preloader" class="preloader">
+        Cargando...
     </div>
     @yield('container')
     @yield('footer')  

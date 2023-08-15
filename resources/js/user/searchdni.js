@@ -4,6 +4,7 @@ import {validacionTipo,validacionCampos,onlyNumbers,clearInput} from "./function
 import { event } from "jquery";
 import { values } from "lodash";
 $(document).ready(function(){
+    $("#preloader").hide();
     let form = $('#form-user'),
         btn = $('#btn-ico'),
         tipo = $('#tipo_doc'),
@@ -14,6 +15,7 @@ $(document).ready(function(){
     
     btn.on('click',function(e){
             e.preventDefault();
+            $("#preloader").show();
             let primerNombre = $('#primer_nombre'),
             primerApellido = $('#primer_apellido'),
             direccion = $('#direccion'),
@@ -47,12 +49,14 @@ $(document).ready(function(){
                     }else{
                         primerNombre.val(response.razonSocial);
                     }
+                    $("#preloader").hide();
                 }
             });
     });
 
     form.on('submit',function(e){
         e.preventDefault();
+        $("#preloader").show();
         let tipo = $('#tipo_doc'),
         numero = $('#input_dni'),
         primerNombre = $('#primer_nombre'),
@@ -94,6 +98,7 @@ $(document).ready(function(){
                             icon: "warning"
                         })  
                     }
+                    $("#preloader").hide();
                 }
             });
         }   

@@ -65,7 +65,8 @@
             padding:2%;
             margin:5% 0;
             background-color:#f6971d;
-            color:white;
+            color:black;
+            font-weight:bold;
             text-decoration:none;
             display:flex;
             width:50%;
@@ -92,8 +93,8 @@
                     <span class="title-muni">HONORABLE MUNICIPALIDAD PROVINCIAL DE PASCO </span><br><br>
                     por este medio le hacemos entrega de las credenciales de acceso para la mesa de partes digital
                         <ul class="list">
-                            <li>Usuario:{{$user}}</li>
-                            <li>Contraseña:{{$pass}}</li>
+                            <li>Usuario:<b>{{$user}}</b></li>
+                            <li>Contraseña:<b>{{$pass}}</b></li>
                         </ul>
                 </p>
                 <p class="email-content">
