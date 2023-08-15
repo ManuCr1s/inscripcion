@@ -96,7 +96,9 @@ $(document).ready(function(){
                             title: "Upps al parecer hubo un problema",
                             text: response.message,
                             icon: "warning"
-                        })  
+                        }).then(()=>{
+                            window.location.reload(); 
+                        })
                     }
                     $("#preloader").hide();
                 }
